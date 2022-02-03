@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="40dp"
+    android:padding="20dp"
+    android:background="@drawable/reminder_background">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/hour"
+        android:text=""
+        android:hint="00"
+        android:textSize="100sp"
+        android:fontFamily="@font/nexa_bold"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hour"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/minute"
+        android:text=""
+        android:hint="00"
+        android:textSize="100sp"
+        android:fontFamily="@font/nexa_bold"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/minute"
+        android:layout_toEndOf="@id/minute"
+        android:layout_alignBottom="@id/minute"
+        android:id="@+id/time"
+        android:gravity="center_vertical"
+        android:layout_below="@id/hour"
+        android:padding="10dp"
+        android:text=""
+        android:hint="AM"
+        android:textSize="20sp"
+        android:fontFamily="@font/nexa_bold"/>
+
+    <TextView
+        android:id="@+id/receivedMsg"
+        android:layout_width="250sp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/minute"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/alarm_info"
+        android:fontFamily="@font/sf_pro_thin"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/repStat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/receivedMsg"
+        android:layout_alignStart="@id/receivedMsg"
+        android:layout_alignLeft="@id/receivedMsg"
+        android:fontFamily="@font/sf_pro"
+        android:gravity="center"
+        android:padding="20sp"
+        android:paddingStart="0sp"
+        android:paddingLeft="0sp"
+        android:textSize="15dp"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/cancelAlarm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/receivedMsg"
+        android:layout_alignEnd="@id/receivedMsg"
+        android:layout_alignRight="@id/receivedMsg"
+        android:fontFamily="@font/nexa_bold"
+        android:gravity="center"
+        android:padding="30sp"
+        android:paddingEnd="0sp"
+        android:paddingRight="0sp"
+        android:text="Cancel"
+        android:textColor="?attr/colorSecondary"
+        android:textSize="25dp" />
+
+    <TextView
+        android:id="@+id/repeatAlarm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/receivedMsg"
+        android:layout_alignStart="@id/repStat"
+        android:layout_alignRight="@id/receivedMsg"
+        android:fontFamily="@font/nexa_bold"
+        android:gravity="center"
+        android:padding="20sp"
+        android:paddingEnd="0sp"
+        android:paddingRight="0sp"
+        android:text="Repeat after 1 min"
+        android:textColor="@color/white"
+        android:textSize="15dp" />
+</RelativeLayout>
